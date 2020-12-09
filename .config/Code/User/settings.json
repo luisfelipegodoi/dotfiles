@@ -1,0 +1,10 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "go.formatTool": "goimports",
+    "explorer.confirmDelete": false,
+    "workbench.colorTheme": "Dracula",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.languageServer": "Microsoft",
+    "sync.gist": "8203c7f03b17dd4d230e8a528c437203"
+}

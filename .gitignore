@@ -1,0 +1,11 @@
+# git credential file
+.gitconfig.local
+
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
