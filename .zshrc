@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -8,7 +15,7 @@ export ZSH="/home/luisfelipe/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="avit"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -68,7 +75,17 @@ ZSH_THEME="avit"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+	git
+	asdf
+	golang
+	kubectl
+	composer
+	bgnotify
+	command-not-found
+	zsh-autosuggestions
+	zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -98,43 +115,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# VPN
-alias vpnlabs="sudo vpnc --local-port=5100 /etc/vpnc/vpn-ML.conf"
-
-# Teresa
-export PATH=$PATH:/opt/teresa
-
-# Tokinho
-export PATH=$PATH:/opt/tokinho
-
-# Software
-alias datagrip="/opt/datagrip-2019.1.2/DataGrip-2019.1.2/bin/datagrip.sh"
-alias robo3t="/opt/robo3t-1.3.1-linux-x86_64-7419c406/bin/robo3t"
-alias nosqlbooster="/opt/nosqlbooster/.nosqlbooster4mongo-6.0.4.AppImage"
-
-# Oracle
-export LD_LIBRARY_PATH="/opt/oracle/instantclient"
-export OCI_HOME="/opt/oracle/instantclient"
-export OCI_LIB_DIR="/opt/oracle/instantclient"
-export OCI_INC_DIR="/opt/oracle/instantclient/sdk/include"
-export PKG_CONFIG_PATH="/opt/oracle/instantclient"
-
-# Golang
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-
-# Python
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+# ASDF
+. $HOME/.asdf/asdf.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-. $HOME/.asdf/asdf.sh
-
-. $HOME/.asdf/completions/asdf.bash
-
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
