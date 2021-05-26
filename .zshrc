@@ -114,11 +114,18 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias intelliJUltimate="/opt/intelliJ/ideaIU-2019.1.2/bin/idea.sh"
+alias intelliJCommunity="/opt/intelliJ/idea-IC-211.7142.45/bin/idea.sh"
+alias mockgen="/home/luisfelipe/.asdf/installs/golang/1.16/packages/bin/mockgen"
 
-# ASDF
-. $HOME/.asdf/asdf.sh
+# Export Paths
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.asdf/installs/golang/1.16/go/src/intelimarket-client-go/internal/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/luisfelipe/.sdkman"
+[[ -s "/home/luisfelipe/.sdkman/bin/sdkman-init.sh" ]] && source "/home/luisfelipe/.sdkman/bin/sdkman-init.sh"
