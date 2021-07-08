@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/luisfelipe/.oh-my-zsh"
+export ZSH="/home/luisfelipegodoi/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -114,12 +114,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias intelliJUltimate="/opt/intelliJ/ideaIU-2019.1.2/bin/idea.sh"
-alias intelliJCommunity="/opt/intelliJ/idea-IC-211.7142.45/bin/idea.sh"
-alias mockgen="/home/luisfelipe/.asdf/installs/golang/1.16/packages/bin/mockgen"
+alias intelliJCommunity="/opt/intellij/idea-IC-211.7442.40/bin/idea.sh"
+alias mockgen="/home/luisfelipegodoi/.asdf/installs/golang/1.16/packages/bin/mockgen"
 
 # Export Paths
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.asdf/installs/golang/1.16/go/src/intelimarket-client-go/internal/bin
+export PATH=$PATH:/usr/share/code/bin/
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -127,5 +127,5 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.asdf/installs/golang/1.16/go/src/inte
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/luisfelipe/.sdkman"
-[[ -s "/home/luisfelipe/.sdkman/bin/sdkman-init.sh" ]] && source "/home/luisfelipe/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="/home/luisfelipegodoi/.sdkman"
+[[ -s "/home/luisfelipegodoi/.sdkman/bin/sdkman-init.sh" ]] && source "/home/luisfelipegodoi/.sdkman/bin/sdkman-init.sh"
