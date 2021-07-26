@@ -1,8 +1,6 @@
 [user]
 	name = Luis Felipe
 	email = godoiluisfelipe@gmail.com
-[includeIf "gitdir:~/Repository/cvc/"]
-    path = ~/Repository/cvc/.gitconfig
 [color]
 	ui = true
 [color "diff-highlight"]
@@ -23,8 +21,6 @@
 	stripLeadingSymbols = false
 	useUnicodeRuler = false
 	rulerWidth = 47
-[url "git@git.cvc.com.br:"]
-	insteadOf = https://git.cvc.com.br/
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [advice]
