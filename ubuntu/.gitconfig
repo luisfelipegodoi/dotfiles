@@ -1,0 +1,27 @@
+[user]
+	name = Luis Felipe
+	email = godoiluisfelipe@gmail.com
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[diff-so-fancy]
+	markEmptyLines = false
+	changeHunkIndicators = false
+	stripLeadingSymbols = false
+	useUnicodeRuler = false
+	rulerWidth = 47
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[advice]
+	statusHints = false
